@@ -44,19 +44,12 @@
             </div>
         </div>
     </header>
-    @auth
-        <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-center">
-                <a class="p-2 link-secondary" href="{{ route('articles.index') }}">Article</a>
-            </nav>
-        </div>
-    @endauth
 
     @auth
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-center">
-                <a class="p-2 link-secondary"
-                href="{{ route('articles.index') }}">Article</a>
+                <a class="p-2 link-secondary" href="{{ route('categories.index') }}">Categories</a>
+                <a class="p-2 link-secondary" href="{{ route('articles.index') }}">Articles</a>
             </nav>
         </div>
     @endauth
@@ -79,9 +72,13 @@
     </div>
 </div>
 
+
+
 <main class="container">
     @yield('content')
 </main>
+
+
 
 <footer class="blog-footer">
     <p>
